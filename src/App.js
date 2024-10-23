@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './componentes/Navbar';
+import Apinasa from './componentes/peticion-api';
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
  
       <section>
        <div> <h1 className='text-principal'> Aqui encontroras imagenes, datos sobre la nasa !!!  </h1> </div>      
-         
-
+        
+      </section>
+      <section className="container-api">
+<div ></div>
+        <Apinasa />
       </section>
     </div>
   );
