@@ -37,9 +37,12 @@ const result =await response.json();
    );
  };
 export default  Apinasa; */
+/*
 
 import React, { useEffect, useState } from "react";
 
+
+  
 const Apinasa = () => { 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);  // Inicializado como true
@@ -68,16 +71,84 @@ const Apinasa = () => {
   if (error) return <p>Hubo una falla: {error}</p>;  // Si hay error, muestra el mensaje
 
   return (
+
     <div>
+        <button onClick={fetchData}>Ver informacion</button>
+            
       <h1>Datos Obtenidos</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
       <p>{data.url} </p>
     <img src={data.url }  alt={data.title}style={{   width: '100%', height: 'auto' }} /> 
     </div>
+    
   );
   
 };
 
-
-
 export default Apinasa;
+*/
+/*
+import React,{ useContext } from "react";
+import { Apinasa } from "./context1";
+ 
+
+
+const Apinasacomponent = () => { 
+
+  const {data, loading, error, fetchData  } = useContext(Apinasa);
+
+
+
+  if (loading) return <p>Cargando...</p>;  // Si está cargando, muestra el mensaje
+  if (error) return <p>Hubo una falla: {error}</p>;  // Si hay error, muestra el mensaje
+
+  return (
+
+    <div>
+      <h1>Datos Obtenidos</h1>
+      {data ? (  
+        <>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+        <p>{data.url} </p>
+        <img src={data.url }  alt={data.title}style={{   width: '100%', height: 'auto' }} /> 
+        </>
+      ) :(
+        <button onClick={fetchData}>Ver informacion</button>
+
+      )}
+      
+    </div>
+    
+  );
+  
+};
+
+export default Apinasacomponent;
+*/
+import React, { useContext } from "react";
+import { Apinasa } from "./context1"; // Importamos el contexto
+
+const ApinasaComponent = () => {
+  const { data, loading, error, fetchData } = useContext(Apinasa);
+
+  if (loading) return <p>Cargando...</p>;
+  if (error) return <p>Hubo una falla: {error}</p>;
+
+  return (
+    <div>
+      <h1>Datos Obtenidos</h1>
+      {/* Mostramos el botón si no hay datos */}
+      {!data ? (
+        <button onClick={fetchData}>Ver información</button>
+      ) : (
+        <>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+          <p>{data.url}</p>
+          <img src={data.url} alt={data.title} style={{ width: '100%', height: 'auto' }} />
+        </>
+      )}
+    </div>
+  );
+};
+
+export default ApinasaComponent;
