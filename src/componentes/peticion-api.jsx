@@ -1,4 +1,7 @@
-/* import React, { useEffect, useState } from "react";
+/* 
+PRIMERA OPCION PARA EL LLAMADO DE LA API SOLO CON USESTATE
+
+import React, { useEffect, useState } from "react";
 
 
 const Apinasa = () => { 
@@ -39,55 +42,11 @@ const result =await response.json();
 export default  Apinasa; */
 /*
 
-import React, { useEffect, useState } from "react";
 
+/* 
+○♦♦SEGUNDA OPCION DE LA LLAMADA DE API UTILIZAMOS USE CONTEXT PARA MEGORAR LA FLUIDEZ DEL CODIGO YA QUE ESTAREMOS LLAMANDO A VARIAS API  , UTILIZANDO EL HOOCK USECONTEXT NOS PERMITE PROVEER LA INFORMACION SIN NECESIDAD DE REALIZAR VARIAS SOLICITUDES DE DIFERENTES COMPONENTES EN LA MISMA HOJA . EN CAMBIO CON ESTE HOOCK SOLO NECESITAMOS RENDERIZARLO 
+SIN QUE HAGA UNA TAREA MAS INECCESARI
 
-  
-const Apinasa = () => { 
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);  // Inicializado como true
-  const [error, setError] = useState(null);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=YeZXHY29QdWZ8XkDeCoPAEh1wnTSv7LmXwxxIw09`);  // Asegúrate de usar una URL válida
-      if (!response.ok) {
-        throw new Error("Error en la solicitud");
-      }
-      const result = await response.json();
-      setData(result);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);  // Finaliza el estado de carga
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);  // Se ejecuta solo una vez al montar el componente
-
-  if (loading) return <p>Cargando...</p>;  // Si está cargando, muestra el mensaje
-  if (error) return <p>Hubo una falla: {error}</p>;  // Si hay error, muestra el mensaje
-
-  return (
-
-    <div>
-        <button onClick={fetchData}>Ver informacion</button>
-            
-      <h1>Datos Obtenidos</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-      <p>{data.url} </p>
-    <img src={data.url }  alt={data.title}style={{   width: '100%', height: 'auto' }} /> 
-    </div>
-    
-  );
-  
-};
-
-export default Apinasa;
-*/
-/*
 import React,{ useContext } from "react";
 import { Apinasa } from "./context1";
  
@@ -125,28 +84,37 @@ const Apinasacomponent = () => {
 
 export default Apinasacomponent;
 */
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Apinasa } from "./context1"; // Importamos el contexto
 
 const ApinasaComponent = () => {
   const { data, loading, error, fetchData } = useContext(Apinasa);
+  const [showinfo, setshowinfo]= useState (false);
+
 
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Hubo una falla: {error}</p>;
 
   return (
     <div>
-      <h1>Datos Obtenidos</h1>
-      {/* Mostramos el botón si no hay datos */}
-      {!data ? (
-        <button onClick={fetchData}>Ver información</button>
-      ) : (
+   <button onClick= {()=> {
+     if(!data) fetchData();
+     setshowinfo(!showinfo);
+     
+    }}>
+    {showinfo ? "ocultar": "mostrar"}
+   </button>
+      {showinfo && data && (
         <>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+        <h1>Datos Obtenidos</h1>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
           <p>{data.url}</p>
           <img src={data.url} alt={data.title} style={{ width: '100%', height: 'auto' }} />
-        </>
-      )}
+        
+       </>
+
+      )} 
+
     </div>
   );
 };

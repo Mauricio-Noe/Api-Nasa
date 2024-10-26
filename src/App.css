@@ -7,10 +7,13 @@
 
 h1{
   font-size: 2.5rem;
-
+  
 }
 
 .text-principal{
   font-size: 1.8vw;
   text-align: center;
+  background: linear-gradient(99deg,#f503e1  , #660ff1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
 }

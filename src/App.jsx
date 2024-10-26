@@ -35,7 +35,7 @@ export default App;
 import './App.css';
 import {Apiprovaider} from './componentes/context1';
 import Navbar from './componentes/Navbar';
-import Apinasacomponent from './componentes/peticion-api';
+import ApinasaComponent from './componentes/peticion-api';
 
 
 
@@ -53,11 +53,12 @@ function App() {
       </section>
 
 
-      <Apiprovaider >
+{ /*Uso de usecontext*/ }
+      <Apiprovaider > 
 
       <section className="container-api">
       
-      <Apinasacomponent />    
+      <ApinasaComponent />    
       </section>
       </Apiprovaider>
     </div>
