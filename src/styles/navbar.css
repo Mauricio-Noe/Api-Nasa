@@ -60,8 +60,7 @@
     font-size: 24px;
   }
   
-  /* Estilos para el menú desplegable */
-  /*.opc-navbar {
+  .opc-navbar {
     display: none;
     flex-direction: column;
     list-style: none;
@@ -76,13 +75,13 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
     transition: max-height 0.5s ease-out;
-    max-height: 0; /* Ocultar el menú inicialmente */
- /* }
+    max-height: 0;   
+    }
   
   .opc-navbar.active {
     display: flex;
-    max-height: 400px; /* Ajusta según el tamaño de tu menú */
-  /*}
+    max-height: 400px; 
+  }
   
   .opcion {
     padding: 15px 20px;
