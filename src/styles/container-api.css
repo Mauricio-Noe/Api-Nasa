@@ -1,0 +1,168 @@
+/* Contenedor general */
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Botón de acción */
+  /* Estilos del botón */
+.btn-api {
+  align-items: center;
+  justify-content: center;
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border: 2px solid transparent; /* Borde inicial transparente */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Transición para el color de fondo */
+   display: flex;}
+  
+  /* Cambio de color de fondo cuando se pasa el ratón */
+  .btn-api:hover {
+    background-color: #555; /* Fondo cambia al pasar el ratón */
+  }
+  
+  /* Animación de cambio de color en el borde */
+  @keyframes borderColorChange {
+    0% {
+      border-color: #d239e6; /* Rojo al inicio */
+    }
+    25% {
+      border-color: #580f80; /* Blanco */
+    }
+    50% {
+      border-color: #2d18ce; /* Azul claro */
+    }
+    75% {
+      border-color: #5c5c9d; /* Azul más oscuro */
+    }
+    100% {
+      border-color: #bea4ce; /* Regresa al rojo */
+    }
+  }
+  
+  /* Aplicamos la animación al pasar el ratón sobre el botón */
+  .btn-api:hover {
+    animation: borderColorChange 2s linear infinite; /* Animación continua con un ciclo de 2 segundos */
+  }
+  
+  
+  /* Contenedor de datos */
+  .data-display {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Imagen de la NASA */
+  .nasa-image {
+    border-radius: 8px;
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contenedor de JSON */
+  .json-display {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    overflow: auto;
+    max-height: 200px;
+    white-space: pre-wrap;
+    margin-top: 15px;
+  }
+  /* Animación de aparición */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Estilos para el título */
+  .title-api {
+    font-size: 24px;
+    color: #f1faee;
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInText 1s ease-out 1s forwards; /* Animación de entrada para el título */
+  }
+  
+  /* Animación para el texto */
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Aparece desde abajo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Vuelve a su posición original */
+    }
+  }
+  
+  /* Estilos para la explicación */
+  .info-api {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #a8dadc;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInText 1s ease-out 1.5s forwards; /* Animación para la explicación */
+  }
+  
+  /* Estilos para la fecha */
+  .date-api {
+    font-size: 14px;
+    color: #457b9d;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInText 1s ease-out 2s forwards; /* Animación para la fecha */
+  }
+  
+  /* Estilos para la imagen */
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInImage 1s ease-out 2.5s forwards; /* Animación para la imagen */
+  }
+  
+  /* Animación para la imagen */
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+      transform: scale(0.9); /* Inicia pequeña */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1); /* Vuelve a su tamaño original */
+    }
+  }
+  
+  /* Estilos para el contenedor del texto e imagen */
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  

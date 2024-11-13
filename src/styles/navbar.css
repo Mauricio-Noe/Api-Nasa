@@ -1,103 +1,78 @@
-.navbar-container{
- display: flex;
- justify-content: space-between;
- padding: 10px;   
- background-color: #333;
- color: white;
- position: relative;
 
-
- 
-}
-.logo-app{
- font-size: 1.5em;
- display: flex;
- text-align: center;
- padding-top: 15px;
-}
-.activacion{
-    display: none;
-}
-
-.opc-navbar{
-
-    display: flex;
-    gap: 35px;
-    
-     
-}
-.opcion {
-    padding: 4px 20px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .opcion:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-/*
-.navbar-container {
+  .navbar-container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     background-color: #333;
     color: white;
     position: relative;
   }
   
   .logo-app {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    text-align: center;
+    padding-top: 15px;
+    
+  background: linear-gradient(99deg,#f503e1  , #660ff1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
   }
   
   .activacion {
-  display: none;
-    cursor: pointer;
-    font-size: 24px;
+    display: none; /* Oculto en pantallas grandes */
   }
   
   .opc-navbar {
-    display: none;
-    flex-direction: column;
+    display: flex; /* Visible en pantallas grandes */
     list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado */
-    /*border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    max-height: 0;   
-    }
-  
-  .opc-navbar.active {
-    display: flex;
-    max-height: 400px; 
   }
   
-  .opcion {
-    padding: 15px 20px;
-    color: white;
-    cursor: pointer;
+  .opc-navbar .opcion {
+    padding: 4px 20px;
+    font-size: 28px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    background: linear-gradient(99deg,#f503e1  , #660ff1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;    cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .opcion:hover {
+  .opc-navbar .opcion:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
   
-  /* Último elemento sin borde inferior */
-  /*.opcion:last-child {
-    border-bottom: none;
-  }*/
+  /* Estilos cuando el menú se activa en pantallas pequeñas */
+  
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 758px) {
+    .activacion{
+      display:block;
+      cursor: pointer;
+      font-size: 28px;
+    }
+    .opc-navbar {
+      display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+    }
+    .opc-navbar.active {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+      max-height: 800px;
+      width: 250px;
+      z-index: 1;
+      transition: max-height 0.5s ease-out;
+    }
+    
+  }
   
