@@ -4,11 +4,12 @@ import "../styles/navbar.css";
  // useref = permite reservar su propiedad en
 const Navbar = () =>{ 
 const [isclose, setopen] = useState (false);
-const uxmenu = useRef(null);
+const menuref = useRef(null);
 
 const tooglemenu = () => {
   setopen(!isclose);
 }
+/*
 useEffect(()=>{
 const handclick =(e) =>{
 if(uxmenu.current && !uxmenu.current.contains,(e.target)){
@@ -22,8 +23,8 @@ return()=>{
    document.removeEventListener("mousedown",handclick);
 }
 
-},[])
-/*
+},[])*/
+
 useEffect(()=>{
    const handclick =(e) => {
       if(menuref.current && !menuref.current.contains,(e.target)){
@@ -36,7 +37,7 @@ useEffect(()=>{
       document.removeEventListener("mousedown",handclick);
    }
 },[])
-*/
+
 return(
 
 <div className="navbar-container">
