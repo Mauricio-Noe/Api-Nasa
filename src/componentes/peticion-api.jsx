@@ -11,24 +11,24 @@ const ApinasaComponent = () => {
   if (error) return <p>Hubo una falla: {error}</p>;
 
   return (
-    <div>
+    <div className="container-info-api">
    <button className="btn-api" onClick= {()=> {
      if(!data) fetchData();
      setshowinfo(!showinfo);
      
     }}>
-    {showinfo ? "ocultar": "mostrar"}
+    {showinfo ? "ocultar": "visualizar"}
    </button>
       {showinfo && data && (
-        <>
-        <h1>Datos Obtenidos</h1>
-         <h1 className="title-api">{data.title} </h1>
-         <h4 className="info-api" >{data.explanation} </h4>
-         <h5 className="date-PI" >{data.date} </h5>
-          <p>{data.url}</p>
-          <img src={data.url} alt={data.title}/>
+        <section className="info-json">
         
-       </>
+        <h1 className="title-api">{data.title} </h1> 
+         <h4 className="info-api" >{data.explanation} </h4>
+          <img className="nasa-image" src={data.url} alt={data.title}/>
+         <h5 className="date-PI" >{data.date} </h5>
+        
+       
+        </section> 
 
       )} 
 

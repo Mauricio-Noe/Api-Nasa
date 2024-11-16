@@ -12,8 +12,8 @@
   
   /* Botón de acción */
   /* Estilos del botón */
-.btn-api {
-  align-items: center;
+.btn-api  {
+  display: flex;
   justify-content: center;
     padding: 10px 40px;
     font-size: 16px;
@@ -25,7 +25,9 @@
     cursor: pointer;
     margin-bottom: 20px;
     transition: background-color 0.3s ease; /* Transición para el color de fondo */
-   display: flex;}
+
+  }
+  
   
   /* Cambio de color de fondo cuando se pasa el ratón */
   .btn-api:hover {
@@ -58,11 +60,23 @@
   
   
   /* Contenedor de datos */
-  .data-display {
+  .container-info-api {
+    display: grid;
+    grid-template-columns:auto;
     text-align: center;
-    color: #333;
+  
   }
   
+  .info-json{
+     
+    background-color: #161617;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    height: auto;
+    margin-top: 15px;
+  }
   /* Imagen de la NASA */
   .nasa-image {
     border-radius: 8px;
@@ -71,20 +85,6 @@
     height: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
-  /* Contenedor de JSON */
-  .json-display {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    overflow: auto;
-    max-height: 200px;
-    white-space: pre-wrap;
-    margin-top: 15px;
-  }
-  /* Animación de aparición */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -121,7 +121,7 @@
   .info-api {
     font-size: 16px;
     line-height: 1.6;
-    color: #a8dadc;
+    color: #f1faee;
     margin: 10px 0;
     opacity: 0;
     animation: fadeInText 1s ease-out 1.5s forwards; /* Animación para la explicación */
@@ -156,13 +156,5 @@
       opacity: 1;
       transform: scale(1); /* Vuelve a su tamaño original */
     }
-  }
-  
-  /* Estilos para el contenedor del texto e imagen */
-  .container-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
   }
   

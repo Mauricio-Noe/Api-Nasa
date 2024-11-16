@@ -1,27 +1,46 @@
 
 .App {
-  background: linear-gradient(to bottom , #d1bbfa, #3553b4);
-  min-height: 100vh;
+/*background: linear-gradient(to bottom , #d1bbfa, #3553b4);*/
+ background-color: black;
+height: 100vh;
+color:white;
   font-family: ubuntu, sans-serif;
    };
-
+ 
  h1{
   font-size:38px;
  }
-.sub-text-titulo {
-  text-align: center;
-  justify-content: center;
-  position: relative;  
-  background: linear-gradient(99deg,#f503e1  , #660ff1);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color: transparent;
-}
+ .sub-text-titulo {
+   text-align: center;
+   justify-content: center;
+   position: relative;
+   font-size:x-large;  
+   background: linear-gradient(99deg,#f503e1  , #660ff1);
+   -webkit-background-clip:text;
+   -webkit-text-fill-color: transparent;
+  }
+  .text-container-1{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30pxpx;
+ 
+  }
+  .text-precentacion{
+   padding: 11px 41px;
+   text-align: center;
+   justify-content: center;
+   position: relative;  
+   font-size: x-large;
+   color: aliceblue;
+  }
 
 .container-api{
 
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 32px;
    
 }
 

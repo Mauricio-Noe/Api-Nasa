@@ -1,4 +1,4 @@
-/*import './App.css';
+/*/*import './App.css';
 import { useState } from 'react';
 import Navbar from './componentes/Navbar';
 import Apinasa from './componentes/peticion-api';
@@ -52,9 +52,21 @@ function App() {
               path='/'
               element={
                 <section className='Inicio-app'>
+                 <div className='text-container-1'> 
+
                   <h1 className='sub-text-titulo'>
                     Aqui podras encontrar datos relacionados con la astrologia como datos y imagenes de la nasa !!!
                   </h1>
+                  <p className='text-precentacion'>¿Te imaginas tener acceso directo a información de la NASA, como imágenes espectaculares del universo o datos sobre planetas y eventos astronómicos?. Aqui podras explorar el espacio desde tu pantalla, aprender sobre constelaciones, fases lunares espectaculares, entre otras muchas mas </p>
+                    
+                  <h3><center> Oo tal vez ver la publicacion del dia por parte de la nasa !! </center>  </h3>
+                 </div>
+                  
+
+                 <section className='contexto-pagina'>
+                                     
+                   
+                 </section>
                   { /* Uso de useContext */ }
                   <Apiprovaider>
                     <section className="container-api">
