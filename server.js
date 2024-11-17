@@ -13,7 +13,7 @@ const cors = require('cors');
 
 const app = express();
 
-const allowedOrigins = ['http://localhost:5000', 'https://api-nasa-pied.vercel.app/'];
+const allowedOrigins = ['http://localhost:3000', 'https://api-nasa-pied.vercel.app/'];
 
 app.use(cors({
     origin: (origin, callback) => {
