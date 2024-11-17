@@ -45,11 +45,21 @@ const cors = require('cors');
 const app = express();
 
 // Dominios permitidos para desarrollo y producción
-
+const allowedOrigins = [
+    'http://localhost:3000',           // Para desarrollo local
+    'http://192.168.x.x:3000',         // Cambia esto por la IP de tu máquina local
+    'https://api-nasa-pied.vercel.app' // Para producción en Vercel
+];
 
 // Middleware CORS
 app.use(cors({
-    origin:'*',
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.some(o => origin.startsWith(o))) {
+            callback(null, true); // Permite la solicitud
+        } else {
+            callback(new Error('Origen no permitido por CORS')); // Rechaza la solicitud
+        }
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
     allowedHeaders: ['Content-Type', 'Authorization'] // Encabezados permitidos
 }));
