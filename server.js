@@ -47,7 +47,6 @@ const app = express();
 // Dominios permitidos para desarrollo y producción
 const allowedOrigins = [
     'http://localhost:3000',           // Para desarrollo local
-    'http://192.168.x.x:3000',         // Cambia esto por la IP de tu máquina local
     'https://api-nasa-pied.vercel.app' // Para producción en Vercel
 ];
 
