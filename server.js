@@ -45,10 +45,7 @@ const cors = require('cors');
 const app = express();
 
 // Dominios permitidos para desarrollo y producción
-const allowedOrigins = [
-               // Para desarrollo local
-    'https://api-nasa-pied.vercel.app' // Para producción en Vercel
-];
+
 
 // Middleware CORS
 app.use(cors({
