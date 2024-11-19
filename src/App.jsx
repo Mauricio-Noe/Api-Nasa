@@ -52,7 +52,9 @@ function App() {
               path='/'
               element={
                 <section className='Inicio-app'>
-                    
+                     <h1 className='sub-text-titulo'>
+                    Aqui podras encontrar datos relacionados con la astrologia como datos y imagenes de la nasa !!!
+                  </h1>
                   <div className='container-img'> 
                    <img className="img-astrono" src={imgastronomia}  />
                   </div>
