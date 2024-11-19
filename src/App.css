@@ -7,9 +7,7 @@ color:white;
   font-family: ubuntu, sans-serif;
 };
  
- h1{
-   
-}
+ 
 .sub-text-titulo {
  padding-top: 25px;
  padding-bottom:40px;
@@ -20,6 +18,20 @@ color:white;
   -webkit-background-clip:text;
   -webkit-text-fill-color: transparent;
  }
+ /*h1.sub-text-titulo, .sub-text-titulo  { 
+ font-size: 2rem; 
+  font-weight: bold; 
+  line-height: 1.5;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(99deg, #f503e1, #660ff1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+
  .container-img{
   display: flex;
   align-items: center;
