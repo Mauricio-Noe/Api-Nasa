@@ -2,48 +2,75 @@
 .App {
 /*background: linear-gradient(to bottom , #d1bbfa, #3553b4);*/
  background-color: black;
-height: 100vh;
+height:100%;
 color:white;
   font-family: ubuntu, sans-serif;
-   };
+};
  
  h1{
-  font-size:38px;
+   
+}
+.sub-text-titulo {
+ padding-top: 25px;
+ padding-bottom:40px;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(99deg,#f503e1  , #660ff1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
  }
- .sub-text-titulo {
-   text-align: center;
-   justify-content: center;
-   position: relative;
-   font-size:x-large;  
-   background: linear-gradient(99deg,#f503e1  , #660ff1);
-   -webkit-background-clip:text;
-   -webkit-text-fill-color: transparent;
-  }
-  .text-container-1{
-  padding-top: 20px;
+ .container-img{
   display: flex;
-  flex-direction: column;
-  gap: 30pxpx;
+  align-items: center;
+  justify-content: center;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto; 
+}
+   .img-astrono{
+     
+      box-shadow:   0 5px  20px 10px  rgba(128, 0.8, 128, 0.8);
+      border-radius: 100%;
  
-  }
+ }
+ .text-container-1{
+ padding-top: 20px;
+ display: flex;
+ flex-direction: column;
+ gap: 30pxpx;
+
+ }
   .text-precentacion{
-   padding: 11px 41px;
+   padding:15px;
+   padding-top:auto; 
    text-align: center;
    justify-content: center;
+   overflow: hidden;
    position: relative;  
    font-size: x-large;
    color: aliceblue;
   }
+  .text-subprecentacion{
+    padding:15px;
+    padding-top:auto; 
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;  
+    color: aliceblue;
+   
 
+  }
 .container-api{
-
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding-top: 32px;
    
 }
-
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 758px) {

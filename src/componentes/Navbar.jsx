@@ -27,7 +27,7 @@ return()=>{
 
 useEffect(()=>{
    const handclick =(e) => {
-      if(menuref.current && !menuref.current.contains,(e.target)){
+      if(menuref.current && !menuref.current.contains(e.target)){
          setopen(false)
       }
 
