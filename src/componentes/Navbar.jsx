@@ -9,21 +9,6 @@ const menuref = useRef(null);
 const tooglemenu = () => {
   setopen(!isclose);
 }
-/*
-useEffect(()=>{
-const handclick =(e) =>{
-if(uxmenu.current && !uxmenu.current.contains,(e.target)){
-
-   setopen(false)
-}
-
-};
-document.addEventListener("mousedown", handclick);
-return()=>{
-   document.removeEventListener("mousedown",handclick);
-}
-
-},[])*/
 
 useEffect(()=>{
    const handclick =(e) => {
@@ -52,7 +37,7 @@ return(
    useRef={menuref}
   className={`opc-navbar  ${isclose ? `active`:``} `}>
    <ul> <Link className="opcion" to="/">Inicio </Link> </ul>
-   <ul> <Link className="opcion" to="/">Informacion </Link> </ul>
+   <ul> <Link className="opcion" to="/HOJA2">Hoja2</Link> </ul>
    <ul> <Link className="opcion" to="/">Nosotros </Link></ul>
    <ul> <Link className="opcion" to="/">Contacto </Link></ul>
    
