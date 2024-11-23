@@ -61,7 +61,8 @@ color:white;
  }
   .text-precentacion{
    padding:15px;
-   padding-top:auto; 
+   padding-bottom: 50px;
+   padding-top:35px; 
    text-align: center;
    justify-content: center;
    overflow: hidden;
@@ -70,25 +71,65 @@ color:white;
    color: aliceblue;
   }
   .text-subprecentacion{
-    padding:35px;
-    padding-top:auto; 
+    padding:20px;
+    padding-top:20px; 
     text-align: center;
     justify-content: center;
     overflow: hidden;
     position: relative;  
     color: aliceblue;
-   
+   font-size: 23px;
 
   }
 .container-api{
-  background-color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.667) );
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding-top: 32px;
+  padding-bottom: 90px;
+  margin-bottom: 50px;
    
 }
+
+.container-info { 
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7)); /* Similar a .container-api */
+  color: white; /* Asegura que el texto sea visible sobre el fondo oscuro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.titulo-info {
+  font-size: 2rem; /* Tamaño del título */
+  font-weight: bold; 
+  color: #f503e1; /* El mismo color usado en otros títulos */
+  text-transform: uppercase; /* Para dar un efecto más fuerte */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  background: linear-gradient(99deg, #f503e1, #660ff1); /* Gradiente igual al de otros elementos */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.texto-info {
+  font-size: 1.1rem; /* Tamaño de texto legible */
+  line-height: 1.6;
+  margin-bottom: 15px; /* Espacio entre párrafos */
+  max-width: 800px; /* Limita el ancho de los párrafos */
+  text-align: center;
+  color: aliceblue; /* Color de texto acorde con el diseño */
+}
+
+.texto-info:last-child {
+  margin-bottom: 0; /* El último párrafo no tendrá margen inferior */
+}
+
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 758px) {

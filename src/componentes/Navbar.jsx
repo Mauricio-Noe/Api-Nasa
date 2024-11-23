@@ -36,9 +36,10 @@ return(
   <li 
    useRef={menuref}
   className={`opc-navbar  ${isclose ? `active`:``} `}>
+  
    <ul> <Link className="opcion" to="/">Inicio </Link> </ul>
    <ul> <Link className="opcion" to="/HOJA2">Hoja2</Link> </ul>
-   <ul> <Link className="opcion" to="/">Nosotros </Link></ul>
+   <ul> <Link className="opcion" to="/nosotros">Nosotros </Link></ul>
    <ul> <Link className="opcion" to="/">Contacto </Link></ul>
    
  </li>

@@ -1,0 +1,7 @@
+.proceso {
+    width: 100vh;           /* Ocupa todo el ancho disponible */
+    height: 100vh;         /* Ocupa todo el alto de la ventana */
+    max-width: 100vh;       /* Limita el ancho al 100% de su contenedor */
+    max-height: 100vh;     /* Limita el alto al 100% de la ventana */
+  }
+  
